@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
+import AviaPage from './pages/avia/avia';
+import AviaInfoPage from './pages/avia-info';
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/'>
+      <Route path='avia' element={<AviaPage />} />
+      <Route path='avia/info' element={<AviaInfoPage />} />\
+    </Route>
+  )
+)
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
-export default App;
+export default App

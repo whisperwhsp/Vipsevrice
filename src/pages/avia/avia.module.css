@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 960px;
+  margin: 3rem auto 0;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5C87DB;
+  border-radius: 15px 15px 0px 0px;
+  padding: 1.5rem;
+}
+
+.button-group {
+  text-align: end;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  border-radius: 0px 0px 15px 15px;
+}
