@@ -1,7 +1,17 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 import AviaPage from './pages/avia/avia';
-import AviaInfoPage from './pages/avia-info';
+import AviaInfoPage from './pages/avia-info/avia-info';
+import { IAviaForm } from './models/IAviaForm';
+
+export const aviaFormData: IAviaForm = {
+  from: '',
+  to: '',
+  there: '',
+  back: '',
+}
+
+export const AviaFormContext = React.createContext<IAviaForm>(aviaFormData)
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,7 +24,10 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <RouterProvider router={router} />
+    <AviaFormContext.Provider value={aviaFormData}>
+      <RouterProvider router={router} />
+    </AviaFormContext.Provider>
+
   )
 }
 

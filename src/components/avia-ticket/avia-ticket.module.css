@@ -1,0 +1,24 @@
+.wrapper {
+  background-color: #fff;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  border-radius: 15px;
+  display: flex;
+  gap: 1.5rem;
+  min-height: 100px;
+}
+.type {
+  background-color: #8BA5D8;
+  border-radius: 15px 0;
+  display: inline-block;
+  width: 132px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 14px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
